@@ -16,7 +16,7 @@
     $linha2 = $interval->f;
 
     //SAIDA
-    $resultado = fopen("respostas/resposta-".$_GET['arq'], "w");
+    $resultado = fopen("respostas/resposta-$nome", "w");
     fwrite($resultado, $linha1."\n");
     fwrite($resultado, $linha2."\n");
     fclose($resultado);
