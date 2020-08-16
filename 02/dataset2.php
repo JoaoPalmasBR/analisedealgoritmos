@@ -2,6 +2,7 @@
     $arquivo = file_get_contents($_GET['arq']);
     $nome = str_replace(".csv",".txt", $_GET['arq']);
     $arquivo = explode("\n", $arquivo);
+    $quantidade = count($arquivo);
     $maior = null;
     $horainicio = new DateTime();
 
@@ -20,3 +21,9 @@
     fwrite($resultado, $linha1."\n");
     fwrite($resultado, $linha2."\n");
     fclose($resultado);
+
+    $grafico = fopen("grafico/$nome", "w");
+    fwrite($grafico, $quantidade."\n");
+    fwrite($grafico, $linha2."\n");
+    fclose($grafico);
+
