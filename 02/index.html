@@ -20,21 +20,22 @@
         // instantiates the pie chart, passes in the data and
         // draws it.
         function drawChart() {
-
             // Create the data table.
             var data = new google.visualization.DataTable();
             data.addColumn('number', 'Quantidade de Itens');
             data.addColumn('number', 'Tempo de execução');
-            data.addRows([
-                [100, 0.00010300000000002],
-                [1000, 0.00024200000000008],
-                [10000, 0.002569],
-                [100000, 0.029884],
-                [1000000, 0.191978]
-            ]);
-
+            //Pegar dados do SESSION
+            var numeros = [];
+            let qtd = sessionStorage.getItem('qtd');
+            for (var i = 0; i < 5; i++){
+                var item = [];
+                item=JSON.parse(sessionStorage.getItem('i'+i).split(","));
+                item[0] = Number(item[0]);item[1] = Number(item[1]);
+                numeros.push(item);
+            }
+            data.addRows(numeros);
             // Set chart options
-            var options = {'title':'How Much Pizza I Ate Last Night',
+            var options = {'title':'Evolução do tempo de execucao pela quantidade de linhas',
                 'width':400,
                 'height':300};
 
@@ -56,6 +57,7 @@
     <a href="dataset2.php?arq=dataset-2-d.csv">D</a>
     <a href="dataset2.php?arq=dataset-2-e.csv">E</a>
     <div id="chart_div"></div>
+    <a href="grafico.php">Atualizar Gráfico</a>
 
     <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
