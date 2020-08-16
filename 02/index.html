@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>AA</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
     <script>
         // Load the Visualization API and the corechart package.
         google.charts.load('current', {'packages':['corechart']});
@@ -46,18 +45,91 @@
     </script>
 </head>
 <body>
-    <li class="list-item"><a>DataSet 1</a></li>
-    <a href="dataset1.php?arq=dataset-1-a.csv">A</a>
-    <a href="dataset1.php?arq=dataset-1-b.csv">B</a>
-    <a href="dataset1.php?arq=dataset-1-c.csv">C</a>
-    <li class="list-item"><a>DataSet 2</a></li>
-    <a href="dataset2.php?arq=dataset-2-a.csv">A</a>
-    <a href="dataset2.php?arq=dataset-2-b.csv">B</a>
-    <a href="dataset2.php?arq=dataset-2-c.csv">C</a>
-    <a href="dataset2.php?arq=dataset-2-d.csv">D</a>
-    <a href="dataset2.php?arq=dataset-2-e.csv">E</a>
-    <div id="chart_div"></div>
-    <a href="grafico.php">Atualizar Gráfico</a>
+<!-- As a link -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="../">Joao Antonio</a>
+</nav>
+<div class="jumbotron">
+    <h1 class="display-4">Analise de Algoritmos</h1>
+</div>
+<div class="container">
+    <!--        CONTEUDO -->
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">DATASET 1</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">A</th>
+            <td>
+                <a href="dataset1.php?arq=dataset-1-a.csv" type="button" class="btn btn-outline-primary">Acessar Recurso</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">B</th>
+            <td>
+                <a href="dataset1.php?arq=dataset-1-b.csv" type="button" class="btn btn-outline-primary">Acessar Recurso</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">C</th>
+            <td>
+                <a href="dataset1.php?arq=dataset-1-c.csv" type="button" class="btn btn-outline-primary">Acessar Recurso</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">DATASET 2</th>
+            <th scope="col">Grafico</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">A</th>
+            <td>
+                <a href="dataset2.php?arq=dataset-2-a.csv" type="button" class="btn btn-outline-primary">Acessar Recurso</a>
+            </td>
+            <td rowspan="5">
+                <div id="chart_div"></div>
+                <a class="btn btn-outline-primary btn-block" href="grafico.php">Atualizar Gráfico</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">B</th>
+            <td>
+                <a href="dataset2.php?arq=dataset-2-b.csv" type="button" class="btn btn-outline-primary">Acessar Recurso</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">C</th>
+            <td>
+                <a href="dataset2.php?arq=dataset-2-c.csv" type="button" class="btn btn-outline-primary">Acessar Recurso</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">D</th>
+            <td>
+                <a href="dataset2.php?arq=dataset-2-d.csv" type="button" class="btn btn-outline-primary">Acessar Recurso</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">E</th>
+            <td>
+                <a href="dataset2.php?arq=dataset-2-e.csv" type="button" class="btn btn-outline-primary">Acessar Recurso</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
 
     <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

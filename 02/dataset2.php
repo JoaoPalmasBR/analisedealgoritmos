@@ -27,3 +27,4 @@
     fwrite($grafico, $linha2."\n");
     fclose($grafico);
 
+echo "<script>window.location.assign('./');</script>";

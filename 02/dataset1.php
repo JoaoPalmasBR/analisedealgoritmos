@@ -33,3 +33,4 @@
     fwrite($resultado, $linha2."\n");
     fwrite($resultado, $linha3."\n");
     fclose($resultado);
+echo "<script>window.location.assign('./');</script>";
