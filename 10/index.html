@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>AA</title>
+</head>
+<body>
+    <!-- As a link -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="../">Joao Antonio</a>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Analise de Algoritmos</h1>
+    </div>
+    <div class="container">
+    <!--        CONTEUDO -->
+        <div style="text-align: center;">
+            <a class="btn btn-dark" href="gerarnumeros.php?q=100">Gerar Arquivo 100</a>
+            <a class="btn btn-info" href="gerarnumeros.php?q=10000">Gerar Arquivo 10000</a>
+            <a class="btn btn-danger" href="gerarnumeros.php?q=100000">Gerar Arquivo 100000</a>    
+        </div>
+        <hr>
+        <section>
+            <h5>Versao 1</h5>
+            100 <a href="v1.php?q=100">Executar</a><br>
+            <div class="alert alert-primary" role="alert">
+                2 megabytes de memoria (2097152)<br>
+                2470 Trocas realizadas<br>
+                12470 Comparacoes feitas<br>
+                0.018066167831421 s foram gastos na execucao
+            </div>
+            10'000 <a href="v1.php?q=10000">Executar</a><br>
+            <div class="alert alert-primary" role="alert">
+                2 megabytes de memoria (2097152)<br>
+                24741822 Trocas realizadas<br>
+                124741822 Comparacoes feitas<br>
+                9.897864818573 s foram gastos na execucao
+            </div>
+            100'000 <a href="v1.php?q=100000">Executar</a><br>
+            <div class="alert alert-danger" role="alert">
+                X megabytes de memoria (X)<br>
+                X Trocas realizadas<br>
+                X Comparacoes feitas<br>
+                excedido o tempo de execucao s foram gastos na execucao
+            </div>
+            <code>
+                $j = 0;<br>
+                while($j < count($l)) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;$comparacoes++;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;$i = 0;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;while($i < count($l)-1) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$comparacoes++;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($l[$i] > $l[$i+1]){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$comparacoes++;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$aux = $l[$i];<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$l[$i] = $l[$i+1];<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$l[$i+1] = $aux;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$trocas++;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$i=$i+1;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;$j=$j+1;<br>
+                }
+            </code>
+            <h5>Versao 2</h5>
+            100 <a href="v2.php?q=100">Executar</a><br>
+            10'000 <a href="v2.php?q=10000">Executar</a><br>
+            100'000 <a href="v2.php?q=100000">Executar</a><br>
+            <code>oi</code>
+
+            <h5>Versao 3</h5>
+            <code>oi</code>
+        </section>
+    </div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
